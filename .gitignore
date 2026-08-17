@@ -1,8 +1,7 @@
 # Dependencies
 node_modules/
 
-# Build Output
-dist/
+# Build Output (committed for gh-pages deployment)
 
 # Environment
 .env
