@@ -3,7 +3,6 @@ name: Deploy Tagebuch to GitHub Pages
 on:
   push:
     branches: [main]
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -27,6 +26,8 @@ jobs:
 
       - name: Build for GitHub Pages
         run: npm run build:pages
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
